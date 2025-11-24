@@ -1,0 +1,11 @@
+{
+  "BackupPlanName": "rds-daily-backup",
+  "Rules": [
+    {
+      "RuleName": "daily-rds-snapshot",
+      "TargetBackupVaultName": "default",
+      "ScheduleExpression": "cron(0 5 ? * * *)",
+      "Lifecycle": {"DeleteAfterDays": 30}
+    }
+  ]
+}
